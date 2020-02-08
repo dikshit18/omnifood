@@ -17,15 +17,20 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.clearfix{zoom: 1;}
+.clearfix{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 /*--------------------------------------*/
 /* Reusable Components */
 /*--------------------------------------*/
 .row {
   max-width: 1140px;
   margin: 0 auto;
-}
-section {
-  padding: 80px;
 }
 
 .box {
@@ -61,7 +66,7 @@ h2:after {
   display: block;
   height: 2px;
   background-color: #eb9950;
-  content: " ";
+  content: " "
   width: 100px;
   margin: 0 auto;
   margin-top: 30px;
@@ -178,6 +183,133 @@ header {
   font-size: 350%;
   display: block;
   color: #eb9950;
-
   margin-bottom: 10px;
+}
+.icon-small{
+  display: inline-block;
+  width:30px;
+  text-align: center;
+  color: #eb9950;
+  font-size: 120%;
+  vertical-align:middle
+}
+
+/*--------------------------------------*/
+/* FEATURES */
+/*--------------------------------------*/
+.section-features{
+  padding-top: 40px;
+}
+
+.section-features .long-copy{
+  margin-bottom: 30px;
+}
+
+/*--------------------------------------*/
+/* MEAL SHOWCASE */
+/*--------------------------------------*/
+.meals-showcase{
+  list-style: none;
+  width:100%
+}
+.meals-showcase li{
+     display: flex; 
+    float: left;   
+}
+
+.meal-photo{  
+  width:100%;
+  margin:0;
+  overflow: hidden;
+  background-color: #000;
+}
+.meal-photo img{
+  width:100%;
+  height: auto;
+  transition: transform 0.5s,opacity 0.5s;
+  opacity: 0.7;
+} 
+.meal-photo img:hover{
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/*--------------------------------------*/
+/* HOW IT WORKS */
+/*--------------------------------------*/
+.section-steps{
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+.app-screen{
+    width:40%;
+}
+.section-steps row h2{
+  margin-bottom: 40px;
+}
+
+.steps-box{
+    margin-top:30px;
+}
+
+.steps-box:first-child{
+  text-align: right;
+  padding-left: 3%;
+  margin-top: 30px;
+
+}
+
+.steps-box:last-child{
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.works-step:last-of-type{
+  margin-bottom: 80px;
+}
+
+.works-step{
+  margin-bottom: 50px;
+}
+.works-step div{
+  color:#eb9950;
+  border:2px solid #eb9950;
+  border-radius: 50%;
+  height:55px;
+  width:55px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+.btn-app img{
+  height : 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/*--------------------------------------*/
+/* CITIES */
+/*--------------------------------------*/
+.box img{
+  width:100%;
+  height:auto;
+  margin-bottom: 15px;
+}
+
+.city-feature{
+  margin-bottom: 5px;
+}
+.city-feature a:link,.city-feature a:visited{
+  color:  #eb9950;
+  text-decoration: none;
+  border-bottom: 1px solid #eb9950;
+  transition: border-bottom 0.2s , color 0.2s;
+}
+
+.city-feature a:hover,.city-feature a:active{
+  color: #555;
+  border-bottom: 1px solid transparent;
 }
