@@ -17,13 +17,14 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-.clearfix{zoom: 1;}
-.clearfix{
+.clearfix {
+  zoom: 1;
+}
+.clearfix {
   content: "";
   clear: both;
   display: table;
 }
-
 
 /*--------------------------------------*/
 /* Reusable Components */
@@ -66,7 +67,7 @@ h2:after {
   display: block;
   height: 2px;
   background-color: #eb9950;
-  content: " "
+  content: " ";
   width: 100px;
   margin: 0 auto;
   margin-top: 30px;
@@ -80,7 +81,8 @@ h3 {
 /* BUTTONS */
 /*--------------------------------------*/
 
-.btn {
+.btn,
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -90,7 +92,8 @@ h3 {
   transition: background-color 0.2s, color 0.2s;
 }
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="submit"] {
   border: 1px solid #eda25f;
   background-color: #eb9950;
   color: #fff;
@@ -104,7 +107,8 @@ h3 {
 }
 
 .btn-full:active,
-.btn-full:hover {
+.btn-full:hover,
+input[type="submit"]:hover {
   background-color: #a15512;
 }
 
@@ -123,6 +127,7 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -185,51 +190,51 @@ header {
   color: #eb9950;
   margin-bottom: 10px;
 }
-.icon-small{
+.icon-small {
   display: inline-block;
-  width:30px;
+  width: 30px;
   text-align: center;
   color: #eb9950;
   font-size: 120%;
-  vertical-align:middle
+  vertical-align: middle;
 }
 
 /*--------------------------------------*/
 /* FEATURES */
 /*--------------------------------------*/
-.section-features{
+.section-features {
   padding-top: 40px;
 }
 
-.section-features .long-copy{
+.section-features .long-copy {
   margin-bottom: 30px;
 }
 
 /*--------------------------------------*/
 /* MEAL SHOWCASE */
 /*--------------------------------------*/
-.meals-showcase{
+.meals-showcase {
   list-style: none;
-  width:100%
+  width: 100%;
 }
-.meals-showcase li{
-     display: flex; 
-    float: left;   
+.meals-showcase li {
+  display: flex;
+  float: left;
 }
 
-.meal-photo{  
-  width:100%;
-  margin:0;
+.meal-photo {
+  width: 100%;
+  margin: 0;
   overflow: hidden;
   background-color: #000;
 }
-.meal-photo img{
-  width:100%;
+.meal-photo img {
+  width: 100%;
   height: auto;
-  transition: transform 0.5s,opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
   opacity: 0.7;
-} 
-.meal-photo img:hover{
+}
+.meal-photo img:hover {
   transform: scale(1.15);
   opacity: 1;
 }
@@ -237,46 +242,45 @@ header {
 /*--------------------------------------*/
 /* HOW IT WORKS */
 /*--------------------------------------*/
-.section-steps{
+.section-steps {
   background-color: #f4f4f4;
   padding-top: 50px;
 }
-.app-screen{
-    width:40%;
+.app-screen {
+  width: 40%;
 }
-.section-steps row h2{
+.section-steps row h2 {
   margin-bottom: 40px;
 }
 
-.steps-box{
-    margin-top:30px;
+.steps-box {
+  margin-top: 30px;
 }
 
-.steps-box:first-child{
+.steps-box:first-child {
   text-align: right;
   padding-left: 3%;
   margin-top: 30px;
-
 }
 
-.steps-box:last-child{
+.steps-box:last-child {
   padding-left: 3%;
   margin-top: 70px;
 }
 
-.works-step:last-of-type{
+.works-step:last-of-type {
   margin-bottom: 80px;
 }
 
-.works-step{
+.works-step {
   margin-bottom: 50px;
 }
-.works-step div{
-  color:#eb9950;
-  border:2px solid #eb9950;
+.works-step div {
+  color: #eb9950;
+  border: 2px solid #eb9950;
   border-radius: 50%;
-  height:55px;
-  width:55px;
+  height: 55px;
+  width: 55px;
   display: inline-block;
   text-align: center;
   padding: 5px;
@@ -284,8 +288,8 @@ header {
   font-size: 150%;
   margin-right: 25px;
 }
-.btn-app img{
-  height : 50px;
+.btn-app img {
+  height: 50px;
   width: auto;
   margin-right: 10px;
 }
@@ -293,23 +297,193 @@ header {
 /*--------------------------------------*/
 /* CITIES */
 /*--------------------------------------*/
-.box img{
-  width:100%;
-  height:auto;
+.box img {
+  width: 100%;
+  height: auto;
   margin-bottom: 15px;
 }
 
-.city-feature{
+.city-feature {
   margin-bottom: 5px;
 }
-.city-feature a:link,.city-feature a:visited{
-  color:  #eb9950;
+.city-feature a:link,
+.city-feature a:visited {
+  color: #eb9950;
   text-decoration: none;
   border-bottom: 1px solid #eb9950;
-  transition: border-bottom 0.2s , color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
 }
 
-.city-feature a:hover,.city-feature a:active{
+.city-feature a:hover,
+.city-feature a:active {
   color: #555;
   border-bottom: 1px solid transparent;
+}
+
+/*--------------------------------------*/
+/* TESTIMONIALS */
+/*--------------------------------------*/
+.section-testimonials {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)),
+    url(../img/back-customers.jpg);
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+  padding-top: 40px;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+}
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+blockquote:before {
+  content: "\201c";
+  font-size: 400%;
+  display: block;
+}
+
+cite img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/*--------------------------------------*/
+/* SIGN UP */
+/*--------------------------------------*/
+.section-plans {
+  background-color: #f4f4f4;
+}
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #eda25f;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border: 0;
+}
+
+/*--------------------------------------*/
+/* CONTACT FORM */
+/*--------------------------------------*/
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*--------------------------------------*/
+/* FOOTER */
+/*--------------------------------------*/
+.footer-nav,
+.social-links {
+  list-style: none;
+}
+footer {
+  background-color: #333;
+  padding: 50px;
+}
+.social-links li {
+  display: flex;
+  float: right;
+  margin-right: 20px;
+}
+.social-links li:last-child,
+.footer-nav li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li {
+  display: flex;
+  float: left;
+  margin-right: 20px;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li:link,
+.social-links li:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li:hover,
+.social-links li:active {
+  text-decoration: none;
+  border: 0;
+  color: #eb9950;
+  transition: color 0.2s;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 50px;
 }
